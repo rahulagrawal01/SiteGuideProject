@@ -1,0 +1,41 @@
+{% extends 'patient/base.html' %}
+{% block content %}
+<style>
+.r{
+     margin-top: 20px;
+     margin-bottom: 20px;
+     margin-right: 20px;
+     margin-left: 20px;
+     width: 97%;
+     border: 4px solid white; 
+}
+</style>
+<table class="table table-dark r table-hover table-striped">
+  <thead>
+ <thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Gender</th>
+<th>Disease Name</th>
+<th>Doctor Name</th>
+<th>Doctor Fee</th>
+<th>Start date</th>
+<th>Fee</th>
+</tr>
+ </thead>
+
+{% for data in patient_list %}
+<tr>
+<td> {{data.First_Name}}</td>
+<td> {{data.Last_Name}}</td>
+<td> {{data.Gender}}</td>
+<td> {{data.Disease}}</td>
+<td> {{data.Doctor_Name}}</td>
+<td> {{data.Doctor_Fees}}</td>
+<td> {{data.Start_dat}}</td>
+<td> {{data.Age}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock content %}

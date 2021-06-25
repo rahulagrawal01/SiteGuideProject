@@ -1,0 +1,30 @@
+{% extends 'patient/base.html' %}
+{% block content %}
+<style>
+.r{
+     margin-top: 20px;
+     margin-bottom: 20px;
+     margin-right: 20px;
+     margin-left: 20px;
+     width: 35%;
+    
+}
+</style>
+<h1></h1>
+<center>
+<img src="../../static/patient/images/3.png" style="position: fixed;top: 8%;left: 0%;width: 100%;height: 100%;" alt="">
+<div class='container r ' style="position: fixed;left: 39%;top: 8%;"> 
+<div style="background:none;" class= 'jumbotron '>
+<form method='POST'>
+{% csrf_token %}
+<table>
+<tr>
+{{form}}
+</tr>
+</table>
+<input type="submit" value="submit" >
+</form>
+</div>
+</div>
+</center>
+{% endblock content %}
